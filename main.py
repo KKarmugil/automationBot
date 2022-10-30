@@ -1,6 +1,7 @@
 import pyautogui
 import os
 import time
+import glob
 path = (os.path.dirname(os.path.abspath(__file__)))
 path=path.capitalize()
 path=(path.replace('\\', '\\\\'))
@@ -43,8 +44,11 @@ def passw(img):
                     print ("succes "+str(img))  
                     return c       
 
-
+file = glob.glob("*")
 while True:
+        
+        for i in file:
+            print(i)
         kar("edit")
         kar("nextblue")
         kar("nokids")
