@@ -10,7 +10,7 @@ print (path)
 c=0
 def kar(img):
             a=0
-            addval=((path)+str(img)+".PNG")
+            addval=((path)+str(img))
             while a<1:
                 try:
                     
@@ -27,7 +27,7 @@ def kar(img):
 
 def passw(img):
             a=0
-            addval=((path)+str(img)+".PNG")
+            addval=((path)+str(img))
             while a<1:
                 try:
                     
@@ -44,23 +44,13 @@ def passw(img):
                     print ("succes "+str(img))  
                     return c       
 
-file = glob.glob("*")
+
+file = glob.glob("*.PNG")
 while True:
-        
         for i in file:
-            print(i)
-        kar("edit")
-        kar("nextblue")
-        kar("nokids")
-        kar("nextblue")
-        kar("nextblue")
-        kar("nextblue")
-        kar("public")
-        kar("save")
-        kar("CLOSE")
+            kar(i)
         pyautogui.scroll(-100)
-        
-        c = passw("pass")
+        c = passw("pass.PNG")
         if c == 2:
             break   
 
